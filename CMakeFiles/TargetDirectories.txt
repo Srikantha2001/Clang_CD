@@ -1,0 +1,12 @@
+/home/srikantha/Documents/CD_EL/CMakeFiles/intrinsics_gen.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/omp_gen.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/acc_gen.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/BigObjectWarning.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/install-BigObjectWarning.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/install-BigObjectWarning-stripped.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/edit_cache.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/rebuild_cache.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/list_install_components.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/install.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/install/local.dir
+/home/srikantha/Documents/CD_EL/CMakeFiles/install/strip.dir

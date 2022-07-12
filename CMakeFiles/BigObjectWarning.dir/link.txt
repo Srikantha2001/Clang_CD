@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wl,-O3 -Wl,--gc-sections -shared  -o BigObjectWarning.so CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o  -Wl,-rpath,"\$ORIGIN/../lib:/usr/lib/llvm-11/lib" /usr/lib/llvm-11/lib/libLLVM-11.so.1 
