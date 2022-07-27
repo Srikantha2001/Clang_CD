@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 #include <unordered_set>
 #include <iostream>
@@ -13,72 +12,19 @@
 #include "clang/Basic/SourceLocation.h"
 #include "clang/AST/Attr.h"
 #include "clang/Lex/Lexer.h"
-#include "clang/Rewrite/Core/Rewriter.h"
 #include "llvm/ADT/StringRef.h"
+#include "clang/Basic/Diagnostic.h"
 
 
 using namespace clang;
 using namespace std;
 
-vector<string> lines;
-int flag=1;
-
-int getline(string s){
-//agnvasfaskm:12:1 fssdf
-	char c=':';
-	int first = s.find(c);
-    int second = s.find(c, first+1);
-    string ln = s.substr(first+1,second);
-    return stoi(ln);
-}
-    
-
-void codemapper(string fname){
-	if(flag<=0){
-		return;
-	}
-	ifstream inp;
-	inp.open(fname);
-
-    string s;
-	while(getline(inp,s)){
-		lines.push_back(s);
-	}
-	inp.close();
-	flag--;
-}
-
-string suggest(string s){
-	int i;
-	for(i=0;i<s.length();i++){
-		if(s[i]=='\t'|| s[i]==' '){
-			i++;
-		}
-		else{
-			break;
-		}
-	}
-	s=s.substr(max(0,i-1));
-
-
-	int first = s.find(' ');
-	s.insert(first+1,"&");
-	return "const "+s;
-}
-string message(string s){
-    return "SUGGESTION : "+suggest(s);
-}
-
-
-
-
 class BigObjectWarningVisitor : public RecursiveASTVisitor<BigObjectWarningVisitor> {
+
 private:
 	ASTContext *context;
 	CompilerInstance& instance;
-
 	DiagnosticsEngine& d;
-
 	unsigned int warningID;
 	
 public:
@@ -86,7 +32,7 @@ public:
 	explicit BigObjectWarningVisitor(ASTContext *context, CompilerInstance& instance):
 			context(context), instance(instance), d(instance.getDiagnostics()) {
 		warningID = d.getCustomDiagID(DiagnosticsEngine::Warning,
-				"Copying Large object:\n%0");
+				"Copying Large object:\n");
 	}
 	const clang::SourceManager& sm=context->getSourceManager();
 	
@@ -104,20 +50,19 @@ public:
 				if(constr->isCopyConstructor()){
 					Decl* D = s->getSingleDecl();
 					VarDecl *VD = (VarDecl *)D;
-					
 					auto FieldInfo = VD->getASTContext().getTypeInfo(VD->getType());
 					auto TypeSize = FieldInfo.Width;
 					
 					if((TypeSize/8)>=20){
-						codemapper("samples/test.cpp");
-						
+						FixItHint fit;
 						auto sr = D->getSourceRange();
 						auto sl = sr.getBegin();
-						string wline = sl.printToString(sm);
-						int lnum=getline(wline);
-						
+						string first_part(sm.getCharacterData(sl),sm.getCharacterData(D->getLocation())-sm.getCharacterData(sl));
+						string last_part(sm.getCharacterData(D->getLocation()),sm.getCharacterData(sr.getEnd())+2);
+						string output = first_part+"&"+last_part;
+						StringRef strRef(output);
 						auto loc = context->getFullLoc(D->getLocation());
-						d.Report(loc, warningID)<<message(lines[lnum-1]);
+						d.Report(loc, warningID)<<fit.CreateInsertion(D->getLocation(),strRef);
 					}
 			
 				}	

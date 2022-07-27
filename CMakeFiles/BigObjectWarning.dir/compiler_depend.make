@@ -690,11 +690,7 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: BigObjectWarning.cc \
   /usr/lib/llvm-11/include/clang/Frontend/Utils.h \
   /usr/lib/llvm-11/include/clang/Driver/OptionUtils.h \
   /usr/lib/llvm-11/include/llvm/Option/OptSpecifier.h \
-  /usr/lib/llvm-11/include/llvm/Support/BuryPointer.h \
-  /usr/lib/llvm-11/include/clang/Rewrite/Core/Rewriter.h \
-  /usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteBuffer.h \
-  /usr/lib/llvm-11/include/clang/Rewrite/Core/DeltaTree.h \
-  /usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteRope.h
+  /usr/lib/llvm-11/include/llvm/Support/BuryPointer.h
 
 
 /usr/lib/llvm-11/include/llvm/Support/BuryPointer.h:
@@ -708,8 +704,6 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: BigObjectWarning.cc \
 /usr/lib/llvm-11/include/clang/StaticAnalyzer/Core/AnalyzerOptions.def:
 
 /usr/lib/llvm-11/include/clang/StaticAnalyzer/Core/Analyses.def:
-
-/usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteBuffer.h:
 
 /usr/lib/llvm-11/include/clang/StaticAnalyzer/Core/AnalyzerOptions.h:
 
@@ -836,8 +830,6 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: BigObjectWarning.cc \
 /usr/lib/llvm-11/include/clang/Basic/CharInfo.h:
 
 /usr/lib/llvm-11/include/clang/AST/StmtIterator.h:
-
-/usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteRope.h:
 
 /usr/lib/llvm-11/include/clang/AST/Stmt.h:
 
@@ -1379,8 +1371,6 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: BigObjectWarning.cc \
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/lib/llvm-11/include/clang/Rewrite/Core/Rewriter.h:
-
 /usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -1550,8 +1540,6 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: BigObjectWarning.cc \
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
-
-/usr/lib/llvm-11/include/clang/Rewrite/Core/DeltaTree.h:
 
 /usr/lib/llvm-11/include/llvm/Support/MathExtras.h:
 

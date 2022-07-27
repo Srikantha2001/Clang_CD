@@ -600,8 +600,4 @@ CMakeFiles/BigObjectWarning.dir/BigObjectWarning.cc.o: \
  /usr/lib/llvm-11/include/clang/Frontend/Utils.h \
  /usr/lib/llvm-11/include/clang/Driver/OptionUtils.h \
  /usr/lib/llvm-11/include/llvm/Option/OptSpecifier.h \
- /usr/lib/llvm-11/include/llvm/Support/BuryPointer.h \
- /usr/lib/llvm-11/include/clang/Rewrite/Core/Rewriter.h \
- /usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteBuffer.h \
- /usr/lib/llvm-11/include/clang/Rewrite/Core/DeltaTree.h \
- /usr/lib/llvm-11/include/clang/Rewrite/Core/RewriteRope.h
+ /usr/lib/llvm-11/include/llvm/Support/BuryPointer.h
