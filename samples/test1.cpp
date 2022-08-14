@@ -25,7 +25,7 @@ class Test{
 public:
 
 	Sample s;
- Sample s2;
+ 	Sample s2;
 	Sample *s3 = new Sample();
 	Test(){
 

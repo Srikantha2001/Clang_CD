@@ -31,5 +31,5 @@ class Foo {
 
 int main(){
 	Foo foo;
-	BigObject big_obj = foo.bar(); 
+	BigObject big_obj = foo.bar();
 }

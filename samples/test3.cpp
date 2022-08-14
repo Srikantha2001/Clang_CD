@@ -10,6 +10,7 @@ class SmallObject{
 public:
 	int e =10;
 	int f = 20;
+
 };
 
 int main(){

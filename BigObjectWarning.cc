@@ -19,6 +19,9 @@
 using namespace clang;
 using namespace std;
 
+// Threshold for size of object
+int THRESHOLD_VALUE  = 20;
+
 class BigObjectWarningVisitor : public RecursiveASTVisitor<BigObjectWarningVisitor> {
 
 private:
@@ -53,7 +56,7 @@ public:
 					auto FieldInfo = VD->getASTContext().getTypeInfo(VD->getType());
 					auto TypeSize = FieldInfo.Width;
 					
-					if((TypeSize/8)>=20){
+					if((TypeSize/8)>=THRESHOLD_VALUE){
 						FixItHint fit;
 						auto sr = D->getSourceRange();
 						auto sl = sr.getBegin();

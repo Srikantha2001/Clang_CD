@@ -19,5 +19,5 @@ public:
 int main(){
 	outer_class o ;
 	auto *i = o.get_inner_class_instance();
-	auto i2 = *i;auto i3=*i;
+	auto i2 = *i;
 }
