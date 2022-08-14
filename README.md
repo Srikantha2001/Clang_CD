@@ -42,5 +42,5 @@ For execution, use the command
     
 ## Screenshots
 
-![App Screenshot](screenshot/screenshot1_clang.png)
-![App Screenshot](screenshot/screenshot2_clang.png)
+![App Screenshot](Screenshot/Screenshot1_clang.png)
+![App Screenshot](Screenshot/Screenshot2_clang.png)
