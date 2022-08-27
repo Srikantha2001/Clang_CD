@@ -1,5 +1,5 @@
 
-# Clang Plugin For Big Object Warning
+# Clang Plugin For Big Object Copy Warning
 
 This is a clang plugin which is developed to provide diagnostic Warning for the copy of big object and suggesting to 
 use reference instead of copy of object. Here the threshold is taken as 20 bytes.
